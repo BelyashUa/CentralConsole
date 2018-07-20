@@ -43,7 +43,7 @@ public class AccountsManagerPage {
     @FindBy (xpath = ".//*[@id='user_form']/div[2]/button[1]")
     public WebElement pressSaveButton;
 
-    public void seveNewUser(){
+    public void saveNewUser(){
         pressSaveButton.click();
     }
 
@@ -53,13 +53,7 @@ public class AccountsManagerPage {
 
 
 
-
-
-
-
-
 //------- NEW USER WINDOW------------//
-
 
     //Browse Domain Button
     @FindBy (id = "show_domain_tree")
@@ -75,6 +69,45 @@ public class AccountsManagerPage {
     public void pressOnSerachUser(){
         searchUser.click();
     }
+
+
+    @FindBy (xpath = "//*[@id=\"user_login\"]")
+    public WebElement userLogonName;
+
+    public void typeUserLogonName(){
+        userLogonName.sendKeys();
+    }
+
+    @FindBy (xpath = "//*[@id=\"user_email\"]")
+    public WebElement typeEmail;
+
+    public void typeEmail(){
+        typeEmail.sendKeys();
+    }
+
+    @FindBy (xpath = "//*[@id=\"user_name\"]")
+    public WebElement typeName;
+
+    public void typeName(){
+        typeName.sendKeys();
+    }
+
+    @FindBy (xpath = "/html/body/div[1]/div[1]/div[2]/div/div/div/div/div[2]/form/div[1]/div[1]/fieldset/ul[1]/li[1]/span[2]/span/ul/li")
+    public WebElement emptyUserLogonName;
+
+    @FindBy (xpath = "/html/body/div[1]/div[1]/div[2]/div/div/div/div/div[2]/form/div[1]/div[1]/fieldset/ul[1]/li[4]/span[2]/span/ul/li")
+    public WebElement emptyEmail;
+
+    @FindBy (xpath = "/html/body/div[1]/div[1]/div[2]/div/div/div/div/div[2]/form/div[1]/div[1]/fieldset/ul[1]/li[5]/span[2]/span/ul/li")
+    public WebElement emptyName;
+
+    @FindBy (xpath = "/html/body/div[1]/div[1]/div[2]/div/div/div/div/div[2]/form/div[1]/div[1]/fieldset/ul[2]/li/div")
+    public WebElement requiredField;
+
+
+    @FindBy (xpath = "/html/body/div[1]/div[1]/div[2]/div[1]/div/div[1]/div")
+    public WebElement newUserWasCreated;
+
 
 
 //--------------------------------------//

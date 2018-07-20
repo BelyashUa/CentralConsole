@@ -26,7 +26,7 @@ public class Login {
         header = new Header(driver);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("https://192.168.0.24/login");
+        driver.get("https://192.168.0.62/login");
     }
 
     @Test

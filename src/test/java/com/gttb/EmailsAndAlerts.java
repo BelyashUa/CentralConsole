@@ -24,7 +24,7 @@ public class EmailsAndAlerts {
         emailsandal = new EmailsAndAlertsPage(driver);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("https://192.168.0.24/login");
+        driver.get("https://192.168.0.62/login");
 
     }
 
@@ -33,7 +33,7 @@ public class EmailsAndAlerts {
 
         loginpage.loginAsAdministrator();
         loginpage.clickLoginButton();
-        driver.get("https://192.168.0.24/setup/system/emails");
+        driver.get("https://192.168.0.62/setup/system/emails");
         emailsandal.setEncriptionSSL();
         emailsandal.selectOnAlertManager();
 
